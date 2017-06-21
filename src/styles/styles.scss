@@ -1,0 +1,127 @@
+// --------------------------------------------------
+// VARS
+// --------------------------------------------------
+$grid-color: #8e44ad;
+
+$col-width-fixed: 52.5;
+$gutter-width-fixed: 30;
+
+$col-width-fluid: 5.46875;
+$gutter-width-fluid: 3.125;
+
+// --------------------------------------------------
+// MIXINS
+// --------------------------------------------------
+@mixin clearfix {
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin grid-gradient {
+	background-image: repeating-linear-gradient(90deg, rgba( $grid-color, 0.1 ) 0%, rgba( $grid-color, 0.1 ) 5.46875%, transparent 5.46875%, transparent 8.59375% ); /* A repeating gradient going from the bottom to top, starting blue, */
+}
+
+/* -------------------------------------------------- */
+/* BOILERPLATE STYLES */
+/* -------------------------------------------------- */
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: greyscale;
+}
+
+body {
+	background: #ecf0f1;
+	font-family: 'Overpass', Helvetica, Arial, sans-serif;
+}
+
+/* -------------------------------------------------- */
+/* DEMO STYLES */
+/* -------------------------------------------------- */
+.wrapper {
+	padding: 30px 20px;
+
+	&:nth-child( even ) {
+		background-color: rgba( 0, 0, 0, 0.05 );
+	}
+}
+
+.example-text {
+	width: 100%;
+	height: auto;
+	display: block;
+	color: rgba( 0, 0, 0, 0.5 );
+	background-color: rgba( 0, 0 ,0, 0.15 );
+	border-radius: 0.4rem;
+	margin: 0 0 20px;
+	padding: 0 10px;
+	font-weight: 600;
+	text-align: center;
+	line-height: 50px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.grid {
+	@include clearfix;
+	@include grid-gradient;
+
+	display: block;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.last {
+	margin-right: 0 !important;
+}
+
+/* -------------------------------------------------- */
+/* FIXED GRID */
+/* -------------------------------------------------- */
+.grid--fixed {
+	width: 960px;
+}
+
+@for $i from 1 through 12 {
+	.col-fixed--#{$i} {
+		width: #{($i*$col-width-fixed)+(($i - 1)*$gutter-width-fixed)}px;
+		float: left;
+
+		@if ( $i != 12 ) {
+			margin-right: #{$gutter-width-fixed}px;
+		}
+	}
+}
+
+/* -------------------------------------------------- */
+/* FLUID GRID */
+/* -------------------------------------------------- */
+.grid--fluid {
+	width: 100%;
+}
+
+@for $i from 1 through 12 {
+	.col-fluid--#{$i} {
+		width: #{($i*$col-width-fluid)+(($i - 1)*$gutter-width-fluid)}#{%};
+		float: left;
+
+		@if ( $i != 12 ) {
+			margin-right: #{$gutter-width-fluid}#{%};
+		}
+	}
+}

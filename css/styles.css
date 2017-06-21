@@ -1,0 +1,226 @@
+/* -------------------------------------------------- */
+/* BOILERPLATE STYLES */
+/* -------------------------------------------------- */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: greyscale;
+}
+
+body {
+  background: #ecf0f1;
+  font-family: 'Overpass', Helvetica, Arial, sans-serif;
+}
+
+/* -------------------------------------------------- */
+/* DEMO STYLES */
+/* -------------------------------------------------- */
+.wrapper {
+  padding: 30px 20px;
+}
+
+.wrapper:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.example-text {
+  width: 100%;
+  height: auto;
+  display: block;
+  color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 0.4rem;
+  margin: 0 0 20px;
+  padding: 0 10px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 50px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.grid {
+  background-image: repeating-linear-gradient(90deg, rgba(142, 68, 173, 0.1) 0%, rgba(142, 68, 173, 0.1) 5.46875%, transparent 5.46875%, transparent 8.59375%);
+  /* A repeating gradient going from the bottom to top, starting blue, */
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.grid:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.last {
+  margin-right: 0 !important;
+}
+
+/* -------------------------------------------------- */
+/* FIXED GRID */
+/* -------------------------------------------------- */
+.grid--fixed {
+  width: 960px;
+}
+
+.col-fixed--1 {
+  width: 52.5px;
+  float: left;
+  margin-right: 30px;
+}
+
+.col-fixed--2 {
+  width: 135px;
+  float: left;
+  margin-right: 30px;
+}
+
+.col-fixed--3 {
+  width: 217.5px;
+  float: left;
+  margin-right: 30px;
+}
+
+.col-fixed--4 {
+  width: 300px;
+  float: left;
+  margin-right: 30px;
+}
+
+.col-fixed--5 {
+  width: 382.5px;
+  float: left;
+  margin-right: 30px;
+}
+
+.col-fixed--6 {
+  width: 465px;
+  float: left;
+  margin-right: 30px;
+}
+
+.col-fixed--7 {
+  width: 547.5px;
+  float: left;
+  margin-right: 30px;
+}
+
+.col-fixed--8 {
+  width: 630px;
+  float: left;
+  margin-right: 30px;
+}
+
+.col-fixed--9 {
+  width: 712.5px;
+  float: left;
+  margin-right: 30px;
+}
+
+.col-fixed--10 {
+  width: 795px;
+  float: left;
+  margin-right: 30px;
+}
+
+.col-fixed--11 {
+  width: 877.5px;
+  float: left;
+  margin-right: 30px;
+}
+
+.col-fixed--12 {
+  width: 960px;
+  float: left;
+}
+
+/* -------------------------------------------------- */
+/* FLUID GRID */
+/* -------------------------------------------------- */
+.grid--fluid {
+  width: 100%;
+}
+
+.col-fluid--1 {
+  width: 5.46875%;
+  float: left;
+  margin-right: 3.125%;
+}
+
+.col-fluid--2 {
+  width: 14.0625%;
+  float: left;
+  margin-right: 3.125%;
+}
+
+.col-fluid--3 {
+  width: 22.65625%;
+  float: left;
+  margin-right: 3.125%;
+}
+
+.col-fluid--4 {
+  width: 31.25%;
+  float: left;
+  margin-right: 3.125%;
+}
+
+.col-fluid--5 {
+  width: 39.84375%;
+  float: left;
+  margin-right: 3.125%;
+}
+
+.col-fluid--6 {
+  width: 48.4375%;
+  float: left;
+  margin-right: 3.125%;
+}
+
+.col-fluid--7 {
+  width: 57.03125%;
+  float: left;
+  margin-right: 3.125%;
+}
+
+.col-fluid--8 {
+  width: 65.625%;
+  float: left;
+  margin-right: 3.125%;
+}
+
+.col-fluid--9 {
+  width: 74.21875%;
+  float: left;
+  margin-right: 3.125%;
+}
+
+.col-fluid--10 {
+  width: 82.8125%;
+  float: left;
+  margin-right: 3.125%;
+}
+
+.col-fluid--11 {
+  width: 91.40625%;
+  float: left;
+  margin-right: 3.125%;
+}
+
+.col-fluid--12 {
+  width: 100%;
+  float: left;
+}
